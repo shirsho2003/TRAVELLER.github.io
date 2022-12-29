@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRAVELLER</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    .services{
+        text-align: center;
+    }
+
+    .services span{
+        font-size: 30px;
+        color: blue;
+        font-weight: bold;
+    }
+    .services .box-container{
+        display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr));
+            gap: 1rem;
+    }
+    .services .box-container .box{
+        background: rgb(191, 255, 248);
+        border-radius: 1rem;
+        padding: 3rem ;
+        text-align: center;
+        border: .2rem solid white;
+    }
+    .services .box-container .box:hover{
+        border: .2rem solid blue;
+    }
+    .services .box-container .box i{
+        font-size: 2.5rem;
+        color: blue;
+        margin-bottom: .1rem;
+    }
+    .services .box-container .box h3{
+        font-size: 2rem;
+    }
+    .services .box-container .box p{
+        font-size: 17px;
+    }
+</style>
+<body>
+    <section class="services" id="services">
+        <div class="heading">
+            <span>Our Services</span>
+            <h1>Countless Experiences</h1>
+        </div>
+        <div class="box-container">
+            <div class="box">
+                <i class="fas fa-globe"></i>
+                <h3>Worldwide</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, minima.</p>
+                
+            </div>
+
+            <div class="box">
+                <i class="fas fa-hiking"></i>
+                <h3>Adventures</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, minima.</p>
+                
+            </div>
+
+            <div class="box">
+                <i class="fas fa-utensils"></i>
+                <h3>Food & Drinks</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, minima.</p>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-hotel"></i>
+                <h3>Affordable Hotels</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, minima.</p>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-wallet"></i>
+                <h3>Affordable Price</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, minima.</p>
+                
+            </div>
+
+            <div class="box">
+                <i class="fas fa-headset"></i>
+                <h3>24/7 support</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, minima.</p>
+                
+            </div>
+        </div>
+    </section>
+</body>
+</html>

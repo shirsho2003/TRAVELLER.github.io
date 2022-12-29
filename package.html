@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>TRAVELLER</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    .package{
+        height: 100vh;
+        background: rgb(255, 255, 255);
+    }
+    .heading{
+        color: rgb(45, 45, 45);
+        font-size: 25px;
+        padding: 1rem;
+        padding-top: 6rem;
+        text-align: center;
+        letter-spacing: .2rem;
+    }
+    .heading span{
+        color: #0098a1;
+    }
+    .package .card-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .package .card-container .card{
+        width: 20rem;
+        margin: 2rem;
+        background: #fff;
+        border-radius: .5rem;
+        box-shadow: 0 .3rem .5rem rgba(0,0,0,.3);
+        overflow: hidden;
+        position: relative;
+    }
+    .package .card-container .card img{
+        height: 15rem;
+        width: 100%;
+        object-fit: cover;
+    }
+    .package .card-container .content{
+        padding-bottom: 2rem;
+        text-align: center;
+        
+    }
+    .package .card-container .content .title{
+        color: #0098a1;
+        font-size: 30px;
+    }
+    .package .card-container .content .title p{
+        color: #333;
+        font-size: 1.3rem;
+        padding: 5px;
+    }
+   
+    
+    .package .card-container .content .btn{
+        font-size: 1.7rem;
+        margin-top: 1.4rem;
+        height: 50px;
+        width: 12rem;
+        border-radius: .5rem;
+        outline: none;
+        border: none;
+        background: #0098a1;
+        color: #fff;
+        cursor: pointer;
+        transition: .2s linear;
+    }
+    .package .card-container .content .btn:hover{
+        background: none;
+        border: .2rem solid #0098a1;
+        color: #0098a1;
+    }
+    .package .card-container .card .discount{
+        position: absolute;
+        top: 1rem; left: 1rem;
+        display: block;
+        height: 3.5rem;
+        width: 6rem;
+        background: red;
+        color: #fff;
+        line-height: 4rem;
+        text-align: center;
+        font-size: 2rem;
+        border-radius: 10px;
+        box-shadow:  0 .3rem .5rem rgba(0,0,0,.3);
+    }
+    .stars{
+        color: gold;
+    }
+</style>
+<body>
+     <section class="package" id="package">
+        <h1 class="heading">TOUR <span>PACKAGES</span></h1>
+        <div class="card-container">
+            <div class="card">
+                <span class="discount">-35%</span>
+                <img src="ga1.jpg" alt="">
+                <div class="content">
+                    <h3 class="title">Gangtok</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <a href="booking.html"><button class="btn">Book Now</button></a>
+                </div>
+            </div>
+            <div class="card">
+                <span class="discount">-45%</span>
+                <img src="kol (1).jpg" alt="">
+                <div class="content">
+                    <h3 class="title">Kolkata</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <a href="booking.html"><button class="btn">Book Now</button></a>
+                </div>
+            </div>
+            <div class="card">
+                <span class="discount">-35%</span>
+                <img src="goa (1).jpg" alt="">
+                <div class="content">
+                    <h3 class="title">Goa</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <a href="booking.html"><button class="btn">Book Now</button></a>
+                </div>
+            </div>
+            <div class="card">
+                <span class="discount">-35%</span>
+                <img src="mumbai (1).jpg" alt="">
+                <div class="content">
+                    <h3 class="title">Mumbai</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <a href="booking.html"><button class="btn">Book Now</button></a>
+                </div>
+            </div>
+            <div class="card">
+                <span class="discount">-35%</span>
+                <img src="mussoorie (1).jpg" alt="">
+                <div class="content">
+                    <h3 class="title">Mussorie</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <a href="booking.html"><button class="btn">Book Now</button></a>
+                </div>
+            </div>
+            <div class="card">
+                <span class="discount">-35%</span>
+                <img src="delhi (1).jpg" alt="">
+                <div class="content">
+                    <h3 class="title">Delhi</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <a href="booking.html"><button class="btn">Book Now</button></a>
+                </div>
+            </div>
+        </div>
+     </section>
+</body>
+</html>

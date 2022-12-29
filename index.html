@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRAVELLER</title>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    *{
+        margin: 0; padding: 0; box-sizing: border-box;
+        font-family: 'Josefin Sans', sans-serif;
+    }
+    header{
+        width: auto; height: 47vh;
+        background-image: url(la.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-top: 20px;
+        
+        
+    }
+    nav{
+        width: 100%; height: 8vh;
+        padding-bottom: 10px;
+        color: rgb(255, 255, 255); display: flex; justify-content: space-between; align-items: center;
+        text-transform: uppercase;  
+    }
+    nav .logo{
+        width: 25%; text-align: center;
+        color: aliceblue;
+    }
+    nav .logo a{
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        font-size: 20px;
+    }
+    nav .logo a span{
+        color: #00fffb;
+    }
+    nav .menu{
+         width: 40%; 
+         display: flex; justify-content: space-around;
+    }
+    nav .menu a{
+        width: 25%;
+        text-decoration: none;
+        color: beige;
+        font-weight: bold;
+    }
+    
+    nav .menu a:hover{
+        color: aquamarine;
+    }
+    main{
+        width: 100%;
+        height: 37vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: azure;
+        
+    }
+    
+    section h3{
+        font-size: 35px; font-weight: 200; letter-spacing: 3px; word-spacing: 2px;
+        text-shadow: 1px 1px 2px black;
+    }
+    section h1{
+        margin: 20px 0 15px 0;
+        font-size: 45px;
+        font-weight: 700;
+        text-shadow: 2px 1px 5px black;
+        text-transform: uppercase; letter-spacing: 3px;
+    }
+    section p{
+        font-size: 25px;
+        word-spacing: 2px;
+        margin-bottom: 25px;
+        text-shadow: 1px 1px 1px black;
+    }
+    section a{
+        padding: 12px 30px;
+        border-radius: 4px;
+        outline: none;
+        text-transform: uppercase;
+        font-size: 13px;
+        font-weight: 500;
+        text-decoration: none;
+        letter-spacing: 1px;
+    }
+    section button{
+        position: relative;
+        background:rgb(234, 82, 82) ;
+        color: rgb(255, 255, 255);
+        padding: 8px 15px 8px 15px;
+        border: none;
+        border-radius: 10px;
+        
+    }
+    section button:hover{
+        z-index: 1;
+        border-color: transparent;
+        background: linear-gradient(90deg,#f9d923,
+        #00a19d,
+        #0c87b7,
+        #cb49ff,
+        red,
+        #f9d923);background-size: 400%;
+        box-shadow: 0 0 15px black;
+        animation: glow 12s linear forwards;
+    }
+    @keyframes glow{
+        from{
+            background-position: 0%;
+        }
+        to{
+            background-position: 400%;
+        }
+    }
+    section button::before{
+        content: '';
+        position: absolute;
+        top: -1px;
+        right: -1px;
+        bottom: -1px;
+        left: -1px;
+        background: inherit;
+        filter: blur(36px);
+        z-index: -1;
+        opacity: 0;
+    }
+    section button:hover::before{
+        opacity: 1;
+        z-index: -1;
+        
+    }
+    section button a{
+        color: aliceblue;
+    }
+    .change_content::after{
+        content: '';
+        animation: changetext 10s infinite linear;
+        color: #00fffb;
+    }
+    @keyframes changetext{
+        0%{content:"Gangtok";}
+        20%{content:"Goa";}
+        35%{content:"Mumbai";}
+        60%{content:"Mussoriee";}
+        80%{content:"Delhi";}
+        100%{content:"Kolkata";}
+    }
+    .search{
+        width: 330px;
+        margin-left: 70px;
+        float: left;
+    }
+    .srch{
+        font-family: 'Times New Roman';
+        width: 200px;
+        height: 30px;
+        background: transparent;
+        border: 1px solid #00fffb;
+        margin-top: 13px;
+        color: aliceblue;
+        border-right: none;
+        font-size: 16px;
+        float: left;
+        padding: 10px;
+        border-bottom-left-radius: 5px;
+        border-top-left-radius: 5px;
+    }
+    .btn{
+        width: 100px;
+        height: 30px;
+        background: #0b9601e1;
+        border: none;
+        margin-top: 13px;
+        color: aliceblue;
+        font-size: 17px;
+        border-bottom-right-radius: 5px;
+        border-top-right-radius: 5px;
+        cursor: pointer;
+    }
+    .btn:focus{
+        outline: none;
+    }
+    .srch:focus{
+        outline: none;
+    }
+    .book-form{
+        width: 80%;
+        margin: 1rem auto;
+        margin-top: -.1rem;
+        background: rgb(3, 70, 255);
+        box-shadow: 0 .5rem 1rem rgba(17,17,17,.3);
+        padding: 3rem 2rem;
+    }
+    form{
+        display: flex;
+        align-items: flex-end;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+        form .inputbox{
+            flex: 20%;
+        }
+        form .inputbox span{
+            font-size: 1.3rem;
+            color: rgb(255, 255, 255);
+        }
+        form .inputbox input{
+            width: 50vh;
+            padding:10px 15px;
+            border-radius: 5rem;
+            border:blue;
+            font-size: 1rem;
+            color: rgb(0, 0, 0);
+            text-transform: none;
+            margin-top: 20px;
+        }
+        form .btn{
+            width: 20%;
+            border-radius: 10px;
+            margin-right: 10px;
+            margin-bottom: 5px;
+            padding-bottom: 25px;
+            padding-left: 50px;
+        }
+        form .btn:hover{
+            background: none;
+            border: 5px solid rgba(0, 148, 40, 0.809);
+            color: rgb(255, 255, 255);
+        }
+        .about{
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-top: 0rem;
+            background: #ffffff;
+        }
+        .about .video-container{
+            flex: 5 10 39vh;
+        }
+        .about .video-container video{
+            border-radius: 1rem;
+            width: 100%;
+            height: 500px;
+            
+        }
+        .about .video-container video .controls{
+            text-align: center;
+            
+        }
+        .about .video-container video .controls span{
+            display: inline-block;
+            height: 5rem;
+            width: 5rem;
+            border-radius: 50%;
+            background: white;
+            cursor: pointer;
+            margin: .7rem;
+        }
+        .about .content{
+            flex: 1 1 40rem;
+            margin-bottom: 5rem;
+            align-items: center;
+            margin-bottom: 5rem;
+        }
+        .about .content span{
+            color: rgb(0, 0, 255);
+            font-size: 2rem;
+        }
+        .about .content h3{
+            color: rgb(255, 0, 0);
+            font-size: 2rem;
+            margin-top: .5rem;
+            align-items: center;
+        }
+        .about .content p{
+            padding: 1rem 0;
+            font-size: 1.4rem;
+            color: rgb(0, 136, 255);
+            line-height: 2;
+        }
+        section{
+            padding-bottom: 10px ;
+            
+        }
+        .heading{
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .heading span{
+            color: blue;
+            font-size: 2rem;
+        }
+        .heading h1{
+            font-size: 2rem;
+            color: rgb(255, 0, 0);
+            margin-top: .5rem;
+        }
+        .destination .box-container{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr));
+            gap: 1rem;
+        }
+        .destination .box-container .box{
+            border-radius: 1rem;
+            overflow: hidden;
+            background: rgb(43, 43, 43);
+        }
+        .destination .box-container .box .image{
+            height: 20rem;
+            overflow: hidden;
+            width: 100%;
+        }
+        .destination .box-container .box .image img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+        .destination .box-container .box .image img:hover{
+            transform: scale(1.1);
+        }
+        .destination .box-container .box .content{
+            padding: 2rem;
+            text-align: center;
+        }
+        .destination .box-container .box .content h3{
+            font-size: 1.5rem;
+            color: #ffffff;
+        }
+        .destination .box-container .box .content p{
+            padding: 1rem 0;
+            font-size: 1.2rem;
+            color: rgb(206, 206, 206);
+            line-height: 2;
+        }
+        .destination .box-container .box .content a{
+            font-size: 1rem;
+            color: rgb(0, 255, 229);
+        }
+        .destination .box-container .box .content a i{
+            padding-right: .5rem;
+        }
+       
+
+
+
+        .footer{
+            background: rgb(36, 36, 36);
+            height: 100%;
+        }
+        .footer .box-container{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+            gap: 1rem;
+        }
+        .footer .box-container .box{
+            padding: 1rem 0;
+        }
+        .footer .box-container .box .logo{
+            margin-top: 19px;
+        }
+        .footer .box-container .box .logo a{
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        font-size: 20px;
+        }
+        .footer .box-container .box .logo a span{
+            color: aqua;
+        }
+        .footer .box-container .box h3{
+            font-size: 1.7rem;
+            color: blue;
+            padding: 1rem 0;
+        }
+        .footer .box-container .box p{
+            font-size: 1rem;
+            color: rgb(255, 255, 255);
+            padding: 1rem 0;
+            line-height: 2;
+            margin-left: 27px;
+            margin-top: 25px;
+        }
+        .footer .box-container .box .share{
+            padding-top: 1rem;
+        }
+        .footer .box-container .box .share a{
+            height: 4.5rem;
+            width: 4.5rem;
+            line-height: -20rem;
+            font-size: 1.5rem;
+            border-radius: 50%;
+            border: black;
+            color: rgb(0, 255, 255);
+            text-align: center;
+        }
+        .footer .box-container .box .share a:hover{
+            color: rgb(255, 255, 255);
+        }
+        .box .top{
+            margin-left: 30px;
+        }
+        .box .links{
+            font-size: 1rem;
+            color: cyan;
+            padding: 1rem 0;
+            display: block;
+            margin-left: 30px;
+        }
+        .box .links:hover{
+            color: white;
+        }
+        .box .links i{
+            padding-right: 2rem;
+        }
+        .box p i{
+            padding-right: .5rem;
+            color: #00fffb; 
+            padding-bottom: 10px;
+           
+        }
+        .footer .box-container .box2{
+            margin-right: 10px;
+            padding-right: 2rem;
+        }
+        .footer .box-container .box2 h3{
+            color: blue;
+            font-size: 1.9rem;
+            margin-top: 30px;
+        }
+        .footer .box-container .box2  p{
+            margin-top: 1.9rem;
+            font-size: 1.2rem;
+            padding-bottom: -10px;
+            color: #ffffff;
+        }
+        .footer .box-container .box2 form .email{
+            width: 80%;
+            border-radius: 5rem;
+            border: rgb(255, 255, 255);
+            background: none;
+            font-size: 1rem;
+            
+            color: #ffffff;
+            margin-top: 1rem;
+            padding: .5rem 1rem;
+        }
+        .footer .box-container .box2 .btn{
+            width: 40%;
+            padding-bottom: 25px;
+            padding-left: 5px;
+            padding-top: 10px;
+        }
+        .footer .box-container .box1 h3{
+            color: blue;
+            font-size: 1.9rem;
+            margin-top: 30px;
+        }
+        .footer .box-container .box1 p{
+            margin-top: 1.9rem;
+            font-size: 1.2rem;
+            padding-bottom: -10px;
+            color: #ffffff;
+        }
+        .footer .box-container .box1 i{
+            font-size: 20px;
+            padding-right: .5rem;
+            color: #00fffb; 
+            padding-bottom: 5px;
+        }
+        .credit{
+            background: rgb(28, 28, 28);
+            color: #ffffff;
+            height: 10vh;
+            width: 100%;
+            text-align: center;
+            padding-top: 30PX;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 15px;
+        }
+        .credit span{
+            color: #00fffb;
+        }
+        @media screen and (max-width: 600px){
+            
+        }
+            
+        
+</style>
+<body>
+    <!--header-->
+ <header>
+    <nav>
+        <div class="logo"> <a href="index.html">Infinity <span>Travel</span> </a></div>
+        <div class="menu">
+            <a href="index.html">Home</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="blog.html">Blogs </a>
+            <a href="package.html">Package</a>
+        </div>
+        <div class="search">
+            <input class="srch" type="search" name="" placeholder="Type To Text">
+            <a href="#"><button class="btn">Search</button></a>
+        </div>
+    </nav>
+        <main>
+            <section>
+                <h3>Welcome To India</h3>
+                <h1>Do Come & Visit <span class="change_content"></span> </h1>
+                <p>Explore The World Together</p>
+                <button><a href="know.html">Know More</a></button> 
+                <button><a href="login.html">Sign Up</a></button> 
+            </section>
+        </main>
+    </header>
+    <!--header end-->
+    <!--booking form-->
+        <section class="book-form" id="book-form">
+            <form action="">
+                <div class="inputbox">
+                    <span>Where to?</span>
+                    <input type="text" placeholder="place name" value="">
+                </div>
+                <div class="inputbox">
+                    <span>When?</span>
+                    <input type="date" value="">
+                </div>
+                <div class="inputbox">
+                    <span>How many?</span>
+                    <input type="number" placeholder="Number of travelers" value="">
+                </div>
+                <a href="booking.html" class="btn">BOOK NOW</a>
+            </form>
+        </section>
+        <!--booking form end-->
+        <!--video-->
+        <section class="about" id="about">
+            <div class="video-container">
+                <video src="kolkata.mp4" muted autoplay loop class="video"></video>
+                <div class="controls">
+                    <span class="control-btn" data-src="gangtok.mp4"></span>
+                    <span class="control-btn" data-src="kolkata.mp4"></span>
+                    <span class="control-btn" data-src="mumbai.mp4"></span>
+                </div>
+            </div>
+            <div class="content">
+                <span>Why choose us?</span>
+                <h3>Nature's Majesty Awaits You</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit perferendis itaque
+         velit repudiandae pariatur consequuntur dignissimos adipisci sapiente voluptatem mollitia.</p>
+            </div>
+        </section>
+        <!--video end-->
+        <!--destination-->
+            <section class="destination" id="destination">
+                <div class="heading">
+                    <span>Our Destination</span>
+                    <h1>Make Your Destination</h1>
+                </div>
+                <div class="box-container">
+                    <div class="box">
+                        <div class="image">
+                            <img src="destiny1.jpg" alt="">
+                        </div>
+                        <div class="content">
+                            <h3>TRAVELLER</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod?</p>
+                            <a href="#">read more <i class="fas fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="image">
+                            <img src="destiny2.webp" alt="">
+                        </div>
+                        <div class="content">
+                            <h3>TRAVELLER</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod?</p>
+                            <a href="#">read more <i class="fas fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="image">
+                            <img src="destiny3.jpg" alt="">
+                        </div>
+                        <div class="content">
+                            <h3>TRAVELLER</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod?</p>
+                            <a href="#">read more <i class="fas fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="image">
+                            <img src="destiny4.jpg" alt="">
+                        </div>
+                        <div class="content">
+                            <h3>TRAVELLER</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod?</p>
+                            <a href="#">read more <i class="fas fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="image">
+                            <img src="destiny5.webp" alt="">
+                        </div>
+                        <div class="content">
+                            <h3>TRAVELLER</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod?</p>
+                            <a href="#">read more <i class="fas fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="image">
+                            <img src="destiny6.png" alt="">
+                        </div>
+                        <div class="content">
+                            <h3>TRAVELLER</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod?</p>
+                            <a href="#">read more <i class="fas fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="image">
+                            <img src="destiny7.jpg" alt="">
+                        </div>
+                        <div class="content">
+                            <h3>TRAVELLER</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod?</p>
+                            <a href="#">read more <i class="fas fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="image">
+                            <img src="destiny8.jpg" alt="">
+                        </div>
+                        <div class="content">
+                            <h3>TRAVELLER</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod?</p>
+                            <a href="#">read more <i class="fas fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="image">
+                            <img src="destiny9.jpg" alt="">
+                        </div>
+                        <div class="content">
+                            <h3>TRAVELLER</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod?</p>
+                            <a href="#">read more <i class="fas fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--destination end-->
+            <!--Footer-->
+           <section class="footer">
+            <div class="box-container">
+                <div class="box">
+                    <div class="logo"> <a href="index.html">Infinity <span>Travel</span> </a></div>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam, fuga</p>
+                    <div class="share">
+                        <a href="#"  class="fa-brands fa-facebook-f"></a>
+                        <a href="#"  class="fa-brands fa-instagram"></i>
+                        <a href="#"  class="fa-brands fa-twitter"></a>
+                        <a href="#"  class="fa-brands fa-linkedin"></a>
+                    </div>
+                </div>
+                <div class="box">
+                    <h3 class="top">Quick Links</h3>
+                    <a href="index.html" class="links"><i class="fas fa-arrow-right"></i>Home</a>
+                    <a href="gallery.html" class="links"><i class="fas fa-arrow-right"></i>Gallery</a>
+                    <a href="blog.html" class="links"><i class="fas fa-arrow-right"></i>Blogs</a>
+                    <a href="package.html" class="links"><i class="fas fa-arrow-right"></i>Package</a>
+                </div>
+                <div class="box1">
+                    <h3>Contact Info</h3>
+                    <p> <i class="fas fa-map"></i> Kolkata,India </p>
+                    <p> <i class="fas fa-phone"></i> +1234-567-890 </p>
+                    <p> <i class="fas fa-envelope"></i> abc@gmail.com </p>
+                    <p> <i class="fas fa-clock"></i> 12:00pm-10:00pm </p>
+                </div>
+
+                <div class="box2">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe For Latest Updates</p>
+                    <form action="">
+                        <input type="email" name="" placeholder="Enter your email here" class="email" id="">
+                        <input type="submit" value="Subscribe" class="btn">
+                    </form>
+                </div>
+            </div>
+           </section>
+           <div class="credit">Created by <span>Shirsho Ghosh</span> | all rights reserved! copyright@<span>shirsho</span></div>
+            <!--Footer end-->
+</body>
+</html>

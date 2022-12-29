@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRAVELLER</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    .blogs{
+        text-align: center;
+    }
+    .blogs span{
+        font-size: 25px;
+        color: blue;
+        font-weight: bold;
+    }
+    .blogs .box-container{
+        display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+            gap: 1rem;
+    }
+    .blogs .box-container .box{
+        border-radius: 1rem;
+        overflow: hidden;
+        background: rgb(176, 248, 255);
+    }
+   
+    .blogs .box-container .box .images{
+        height: 20rem;
+        overflow: hidden;
+        width: 100%;
+    }
+    .blogs .box-container .box .images img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    .blogs .box-container .box .images img:hover{
+        transform: scale(1.1);
+    }
+    .content{
+        padding: 1rem;
+    }
+    .content p{
+        padding: 0.1rem 0;
+        font-size: 1.1rem;
+        line-height: 2;
+    }
+    .content .icon{
+        padding-top: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    a{
+        font-size: 1.2rem;
+        color: blueviolet;
+        text-decoration: none;
+    }
+    a:hover{
+        color: blue;
+    }
+    i{
+        padding-right: .5rem;
+        color: blue;
+    }
+</style>
+<body>
+    <section class="blogs" id="blogs">
+        <div class="heading">
+            <span>Blog & Posts</span>
+            <h1>Our Untold Stories</h1>
+        </div>
+        <div class="box-container">
+            <div class="box">
+                <div class="images">
+                    <img src="blog1.jpg" alt="">
+                </div>
+                <div class="content">
+                <h3>Life is a journey, not a destination</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, et</p>
+                <div class="icon">
+                    <a href="#"><i class="fas fa-clock"></i> 27th dec, 2022</a>
+                    <a href="#"><i class="fas fa-user"></i> by admin</a>
+                </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="images">
+                    <img src="blog2.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>Life is a journey, not a destination</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, et</p>
+                    <div class="icon">
+                        <a href="#"><i class="fas fa-clock"></i> 27th dec, 2022</a>
+                        <a href="#"><i class="fas fa-user"></i> by admin</a>
+                    </div>
+                    </div>
+            </div>
+
+            <div class="box">
+                <div class="images">
+                    <img src="blog3.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>Life is a journey, not a destination</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, et</p>
+                    <div class="icon">
+                        <a href="#"><i class="fas fa-clock"></i> 27th dec, 2022</a>
+                        <a href="#"><i class="fas fa-user"></i> by admin</a>
+                    </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
